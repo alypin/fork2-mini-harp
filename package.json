@@ -1,0 +1,17 @@
+{
+  "name": "fork2-mini-harp",
+  "version": "0.0.0",
+  "description": "lession 1",
+  "main": "index.js",
+  "bin": {
+    "mini-harp": "bin/mini-harp.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jiahui",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "connect": "~3.0.0-rc.1"
+  }
+}
