@@ -1,4 +1,8 @@
-var createMiniHarp = require("mini-harp")
-  , app = createMiniHarp();
-console.log("Starting mini-harp on http://localhost:4000");
-app.listen(4000);
+function createMiniHarp(port){
+	var connect = require("connect")
+    var app = connect();
+	console.log("Starting mini-harp on http://localhost: "+port);
+	app.listen(port);
+}	
+
+module.exports=createMiniHarp;

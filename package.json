@@ -1,5 +1,5 @@
 {
-  "name": "fork2-mini-harp",
+  "name": "mini-harp",
   "version": "0.0.0",
   "description": "lession 1",
   "main": "index.js",
@@ -12,6 +12,7 @@
   "author": "Jiahui",
   "license": "BSD-2-Clause",
   "dependencies": {
-    "connect": "~3.0.0-rc.1"
+    "connect": "~3.0.0-rc.1",
+    "minimist": "~0.1.0"
   }
 }
