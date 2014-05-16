@@ -1,6 +1,7 @@
 var serveStatic = require('serve-static');
 var makeJade=require('./lib/processor/jade');
 var makeLess=require('./lib/processor/less');
+var path=require('path');
 function createMiniHarp(root){
 	var connect = require("connect")
     var app = connect();
@@ -19,6 +20,14 @@ function createMiniHarp(root){
 		}
 
 
+	})
+	app.use(function(req, res,next){
+		var extname=path.extname(req.url);
+		if(extname=='.jade' || extname==='.less'){
+			res.statusCode=404;
+			
+		}
+		next();
 	})
 
 	app.use(serveStatic(root))
