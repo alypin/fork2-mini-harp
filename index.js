@@ -6,6 +6,11 @@ function createMiniHarp(root){
     var app = connect();
 	
 	app.use(function(req,res,next){
+		if(req.url=='/'){
+			req.url='/index.html';
+		}
+
+
 		if(req.url==="/current-time"){
 			res.end((new Date()).toISOString());
 		}
